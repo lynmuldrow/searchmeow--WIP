@@ -27,12 +27,12 @@
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->	
+    <![endif]-->  
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Skate Parks Near You</title>
-	<link rel="stylesheet" href="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Clubs near you</title>
+  <link rel="stylesheet" href="">
 </head>
 <body>
  
@@ -51,3 +51,32 @@
          </ul>
       </div> <!-- End of Navigation Bar -->
 
+
+
+
+  <!-- Start of Form -->
+<div class="row">
+    <h2 class="find_header">Find places to party in your area!</h2>
+        <form class="form-signin" role="form" action="/search" method="GET">
+        <label for="city" class="sr-only">City</label>
+        <input type="text" id="city" class="form-control" name="city" placeholder="Enter City" required autofocus>
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Search Now</button>
+      </form>
+</div>
+<!-- End of Form -->
+
+  <ul>
+  <% data.forEach(function(result){ %>
+    <li>Name: <%= result.venue.name %> </li>
+    <li>Address: <%= result.venue.location.address %></li>
+    <li>City: <%= result.venue.location.city %></li>
+    <li>State: <%= result.venue.location.state %></li>
+    <li>Phone: <%= result.venue.contact.formattedPhone %></li>
+    <br>
+  <% }) %>
+  </ul>
+
+  
+</body>
+</html>

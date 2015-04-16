@@ -9,14 +9,15 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Skate Park</title>
+    <title>searchmeow</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
+    
     <!-- Custom styles for this template -->
     <link href="/stylesheets/signin.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
@@ -45,22 +46,16 @@
          </ul>
       </div> <!-- End of Navigation Bar -->
 
-<!-- Start of Form -->
-      <form class="form-signin" role="form" action="/login" method="post">
-        <h2 class="form-signin-heading">Log In</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" name="user[email]" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" name="user[password]" placeholder="Password" required>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      </form>
-<!-- End of Form
+      <!-- Put your user profile information here -->
+      <div id="profile">
+        <%= JSON.stringify(user); %>
+      </div>
 
     </div> <!-- /container -->
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </body>
 </html>
-

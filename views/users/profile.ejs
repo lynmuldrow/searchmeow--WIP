@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     
     <!-- Custom styles for this template -->
-    <link href="/stylesheets/signin.css" rel="stylesheet">
+    <link href="signin.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -49,17 +49,7 @@
       <!-- Put your user profile information here -->
       <div id="profile">
 
-        <% results.forEach(function(result) { %>
-        
-        <img src="<%= result.url %>" width="300" class="img-rounded img-responsive center-block">
-        <form method="POST" action="/favorites">
-            <input type="hidden" name="imgurl" value="<%=result.url%>">
-            <button class="btn btn-primary cust-btn center-block" >Favorite</button>
-        </form>        
-    
-    <% }) %>
-      </div>
-
+       
     </div> <!-- /container -->
 
 

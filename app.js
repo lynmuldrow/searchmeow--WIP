@@ -125,7 +125,24 @@ app.get("/logout", function (req, res) {
   res.redirect("/");
 });
 
-app.get('/favorite', function (req, res){
+
+app.get('/profile', function (req,res){
+             if (req.session.userId){
+                 db.User.find(req.session.userId)
+                 .then(function (dbUser) {
+                     dbUser.getFavimages()
+                     .then(function(dbImages) {
+                         res.render('profile', { user: dbUser, images: dbImages });
+                     })
+                 })
+             } else {
+                 res.redirect('/login');
+             }
+         
+     });
+
+
+app.get('/favorites', function (req, res){
 res.render('favorite');
 })
 

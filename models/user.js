@@ -10,7 +10,7 @@ module.exports = function (sequelize, DataTypes){
         len: [6, 30],
       }
     },
-    passwordDigest: {
+    password: {
       type:DataTypes.STRING,
       validate: {
         notEmpty: true
@@ -19,9 +19,13 @@ module.exports = function (sequelize, DataTypes){
   },
 
   {
+    associate: function(models){
+      this.hasMany(models.Favorite);
+    
+    },
     instanceMethods: {
       checkPassword: function(password) {
-        return bcrypt.compareSync(password, this.passwordDigest);
+        return bcrypt.compareSync(password, this.password);
       }
     },
     classMethods: {
@@ -35,7 +39,7 @@ module.exports = function (sequelize, DataTypes){
         }
         return this.create({
           email: email,
-          passwordDigest: this.encryptPassword(password)
+          password: this.encryptPassword(password)
         });
 
       },

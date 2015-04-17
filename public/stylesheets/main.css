@@ -1,9 +1,92 @@
-body {
-    background-image: url("/images/monet.jpg");
-    background-repeat: no-repeat;
-    min-height: 100%;
+/*!
+ * Start Bootstrap - The Big Picture HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+
+}
+
+.full {
+   position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+
+}
+
+ /* Video Background */
+
+.body {
+  margin: 0;
+  background: #000; 
+}
+
+#title {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  color: white;
+  overflow: hidden;
+
+}
+
+#content2 {
+  position: fixed;
+  bottom: 150px;
+  left: 150px;
+  color: white;
+  font-size: 75px;
+  font-family:'Monotype Corsiva', 'Apple Chancery', 'ITC Zapf Chancery', 'URW Chancery L', cursive;
+  text-shadow: 2px 2px 8px #000;
+}
+
+#content {
+  position: fixed;
+  bottom: 245px;
+  left: 370px;
+  
+}
+
+.video { 
+    height: 100%;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1000 px;
+    background: url(/images/Girls_in_Club.mp4) no-repeat;
+    overflow: hidden;
+}
+.stopfade { 
+   opacity: .5;
+}
+
+.h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  text-decoration-color: white;
+  letter-spacing: .3rem;
+}
+
+.a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  background:rgba(0,0,0,0.5);
+  padding: .5rem;
+  transition: .6s background; 
+}
+.a:hover{
+  background:rgba(0,0,0,0.9);
+}
+@media screen and (max-width: 500px) { 
+  div{width:70%;} 
+}
+@media screen and (max-device-width: 800px) {
+  html { background: url(http://i.imgur.com/hGoJew4.png) #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
 }

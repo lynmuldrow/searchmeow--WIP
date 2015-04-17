@@ -51,31 +51,23 @@
          </ul>
       </div> <!-- End of Navigation Bar -->
 
+<p class="lead">It's time to <b>party.</b> Visit one of these spots today, or save them for tomorrow.</p>
+<br/><br/>
 
-
-
-  <!-- Start of Form -->
-<div class="row">
-    <h2 class="find_header">Find places to party in your area!</h2>
-        <form class="form-signin" role="form" action="/search" method="GET">
-        <label for="city" class="sr-only">City</label>
-        <input type="text" id="city" class="form-control" name="city" placeholder="Enter City" required autofocus>
-        <br>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Search Now</button>
-      </form>
-</div>
-<!-- End of Form -->
-
-  <ul>
+<ul>
   <% data.forEach(function(result){ %>
     <li>Name: <%= result.venue.name %> </li>
     <li>Address: <%= result.venue.location.address %></li>
     <li>City: <%= result.venue.location.city %></li>
     <li>State: <%= result.venue.location.state %></li>
     <li>Phone: <%= result.venue.contact.formattedPhone %></li>
-    <br>
+    <form action="POST"method="/favorite">
+      <button class="btn btn-sm btn-default" type="submit">Add to Favorites</button>
+    </form>
+    <br/>
   <% }) %>
   </ul>
+  </div> 
 
   
 </body>

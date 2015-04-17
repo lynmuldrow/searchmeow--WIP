@@ -1,16 +1,20 @@
 {
   "development": {
-    "database": "searchmeow_database_development",
+    "database": "searchMeow",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "database": "searchmeow_database_test",
+    "username": "root",
+    "password": null,
+    "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "database": "searchmeow_database_production",
+    "username": "root",
+    "password": null,
+    "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }

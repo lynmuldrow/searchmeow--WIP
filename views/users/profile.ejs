@@ -48,7 +48,16 @@
 
       <!-- Put your user profile information here -->
       <div id="profile">
-        <%= JSON.stringify(user); %>
+
+        <% results.forEach(function(result) { %>
+        
+        <img src="<%= result.url %>" width="300" class="img-rounded img-responsive center-block">
+        <form method="POST" action="/favorites">
+            <input type="hidden" name="imgurl" value="<%=result.url%>">
+            <button class="btn btn-primary cust-btn center-block" >Favorite</button>
+        </form>        
+    
+    <% }) %>
       </div>
 
     </div> <!-- /container -->

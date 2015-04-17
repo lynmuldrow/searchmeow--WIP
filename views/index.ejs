@@ -1,46 +1,77 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>searchmeow</title>
-	<link rel="stylesheet" href="../stylesheets/main.css">
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	 <!-- Custom styles for this template -->
-    <link href="/stylesheets/signin.css" rel="stylesheet">
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>searchmeow</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href='../stylesheets/cover.css' type="text/css" rel="stylesheet">
 
 
-<!-- Navigation Bar -->
-<div class="container">
-<div id="navbar" class="collapse navbar-collapse">
-  	<ul class="nav navbar-nav">
-    	<li class="active"><a href="/">Home</a></li>
-	</ul>
-	<ul class="nav navbar-nav navbar-right">
-    	<li><a href="/login">Login</a></li>
-    	<li><a href="/logout">Log Out</a></li>
-    	<li><a href="/signup">Sign Up</a></li>
- 	 </ul>
-</div> <!-- End of Navigation Bar -->
+  </head>
 
-<!-- Start of Form -->
-<div class="row">
-		<h2 class="find_header">Search for places:</h2>
-      	<form class="form-signin" role="form" action="/search" method="GET">
-        <label for="city" class="sr-only">City</label>
-        <input type="text" id="city" class="form-control" name="city" placeholder="Enter City" required autofocus>
-        <br>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Search Now</button>
-      </form>
-</div>
-<!-- End of Form -->
+  <body>
 
+    <div class="site-wrapper">
 
+      <div class="site-wrapper-inner">
 
+        <div class="cover-container">
+              <!-- Navigation Bar -->
+              <div class="container">
+                <h1 class="masthead-brand">searchmeow.</h1>
+              <div id="navbar" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li class="active"><a href="/">Home</a></li>
+                      <li><a href="/login">Login</a></li>
+                      <li><a href="/logout">Log Out</a></li>
+                      <li><a href="/signup">Sign Up</a></li>
+                 </ul>
+            </div> <!-- End of Navigation Bar -->
+             <div class="masthead clearfix">
+            <div class="inner">
+              
+            </div>
+          </div>
 
-</div><!-- End of Container -->
-</body>
+          <div class="inner cover">
+            <h2 class="cover-heading">Nightclubs, just for you.</h2>
+            <p class="lead">searchmeow finds nightclubs for women who like women. Live, local, and lovely- search now and party tonight.</p>
+
+                    <form class="form-signin" role="form" action="/search" method="GET">
+                    <label for="city" class="sr-only">City</label>
+                    <input type="text" id="city" class="form-control" name="city" placeholder="Enter City" required autofocus>
+                    <br>
+                    <p class="lead">
+                    <button class="btn btn-lg btn-default" type="submit">Search Now</button>
+                   </p>
+                 </form>
+            
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>
+

@@ -147,10 +147,10 @@ res.render('favorite');
 })
 
  app.post('/favorites', function(req,res){
-     var imgurl = req.body.imgurl;
+     var favs = req.body.favorite;
      req.currentUser().then(function(dbUser){
         if (dbUser) {
-             dbUser.addToFavs(db,imgurl).then(function(){
+             dbUser.addToFavs(db,favs).then(function(){
                  res.redirect('/profile');
              });
          } else {

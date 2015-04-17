@@ -18,6 +18,41 @@
     <link href="signin.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
 
+    <!-- CSS- stylesheet path won't respond...quick hack, sorry. -->
+
+<style type="text/css">
+
+body {
+    background-image: url("http://i.imgur.com/hGoJew4.png");
+    background-color: #cccccc;
+}
+
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+</style>
+
 
   </head>
 
@@ -38,7 +73,7 @@
          </ul>
       </div> <!-- End of Navigation Bar -->
 
-      <form class="form-signin" role="form" action="/signup" method="POST">
+      <center><form class="form-signin" role="form" action="/signup" method="POST">
         <h2 class="form-signin-heading">Sign Up</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" name="email" class="input-xxlarge" placeholder="Email address" required autofocus>
@@ -47,7 +82,7 @@
         <input type="password" id="inputPassword" name="password" class="input-xxlarge" placeholder="Password" required>
         <br/><br/>
         <button class="btn btn-lg btn-default" type="submit">Sign up</button>
-      </form>
+      </form></center>
 
     </div> <!-- /container -->
 

@@ -17,6 +17,42 @@
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
 
+    <!-- CSS- stylesheet path won't respond...quick hack, sorry. -->
+
+<style type="text/css">
+
+body {
+    background-image: url("http://i.imgur.com/hGoJew4.png");
+    background-color: #cccccc;
+}
+
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+</style>
+
+
 
   </head>
 
@@ -40,8 +76,8 @@
             </div> <!-- End of Navigation Bar -->
              
 
-          <div class="inner cover">
-            <h2 class="cover-heading">Nightclubs, just for you.</h2>
+         <center> <div class="inner cover">
+            <h2 class="cover-heading" c;>Nightclubs, just for you.</h2>
             <p class="lead">searchmeow finds nightclubs for women who like women. Live, local, and lovely- search now and party <b>tonight.</b></p>
 
                     <form class="form-signin" role="form" action="/search" method="GET">
@@ -52,7 +88,7 @@
                     <p class="lead">
                     <button class="btn btn-lg btn-default" type="submit">Search Now</button>
                    </p>
-                 </form>
+                 </form></center>
             
           </div>
 

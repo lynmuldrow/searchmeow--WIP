@@ -142,22 +142,7 @@ app.get('/profile', function (req,res){
      });
 
 
-app.get('/favorites', function (req, res){
-res.render('favorite');
-})
 
- app.post('/favorites', function(req,res){
-     var favs = req.body.favorite;
-     req.currentUser().then(function(dbUser){
-        if (dbUser) {
-             dbUser.addToFavs(db,favs).then(function(){
-                 res.redirect('/profile');
-             });
-         } else {
-            res.redirect('/login');
-        }
-     }); 
- });
 
 
 
